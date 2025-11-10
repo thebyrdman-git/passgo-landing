@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGo - Gamified Personal Finance</title>
+    <meta name="description" content="PassGo - Pass Go. Collect Your Rich Life. A gamified personal finance dashboard inspired by Ramit Sethi's philosophy.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .logo {
+            font-size: 6em;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+        
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .feature-desc {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .cta {
+            margin-top: 40px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .philosophy {
+            margin-top: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .philosophy h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-quote {
+            font-size: 1.3em;
+            font-style: italic;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .philosophy-author {
+            font-size: 1.1em;
+            opacity: 0.8;
+        }
+        
+        footer {
+            margin-top: 60px;
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            transition: border-color 0.3s ease;
+        }
+        
+        footer a:hover {
+            border-color: white;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .tagline { font-size: 1.4em; }
+            .description { font-size: 1.1em; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎲</div>
+        <h1>PassGo</h1>
+        <div class="tagline">Pass Go. Collect Your Rich Life.</div>
+        
+        <div class="description">
+            A gamified personal finance dashboard that transforms your financial journey into an interactive game. 
+            Track your money, unlock achievements, and build your Rich Life with Ramit Sethi's philosophy.
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📁</div>
+                <div class="feature-title">Easy Import</div>
+                <div class="feature-desc">Upload OFX files from any bank</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">Goal Tracking</div>
+                <div class="feature-desc">Set and achieve financial milestones</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🏆</div>
+                <div class="feature-title">Property Collection</div>
+                <div class="feature-desc">Unlock properties as you progress</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Cash Flow Analysis</div>
+                <div class="feature-desc">Visualize your financial health</div>
+            </div>
+        </div>
+        
+        <div class="philosophy">
+            <h2>💡 Inspired by Ramit Sethi</h2>
+            <div class="philosophy-quote">
+                "Stop asking $3 questions. Start asking $30,000 questions."
+            </div>
+            <div class="philosophy-author">
+                Focus on the Big Wins • Automate Everything • Spend Lavishly on What You Love
+            </div>
+        </div>
+        
+        <div class="cta">
+            <a href="https://github.com/ansaico/passgo" class="btn">
+                ⭐ Star on GitHub
+            </a>
+            <a href="https://ansai.dev" class="btn btn-secondary">
+                🚀 Powered by Ansai
+            </a>
+        </div>
+        
+        <footer>
+            <p>
+                <strong>Coming Soon!</strong> PassGo is under active development.<br>
+                Open source • MIT Licensed • Built with ❤️ by the community
+            </p>
+            <p style="margin-top: 20px;">
+                <a href="https://github.com/ansaico/passgo">GitHub</a> • 
+                <a href="https://ansai.dev">Ansai</a> • 
+                <a href="mailto:hello@ansai.dev">Contact</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

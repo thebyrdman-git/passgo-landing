@@ -14,13 +14,13 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #1a472a 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            color: white;
+            color: #f5f5dc;
         }
         
         .container {
@@ -49,13 +49,15 @@
             font-size: 3.5em;
             margin-bottom: 20px;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
         }
         
         .tagline {
             font-size: 1.8em;
             margin-bottom: 30px;
             font-weight: 300;
+            color: #fff8dc;
             opacity: 0.95;
         }
         
@@ -77,17 +79,19 @@
         }
         
         .feature {
-            background: rgba(255, 255, 255, 0.1);
+            background: #f5f5dc;
             padding: 25px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, background 0.3s ease;
+            border-radius: 10px;
+            border: 3px solid #2d5a3d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #2d5a3d;
         }
         
         .feature:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            border-color: #ffd700;
         }
         
         .feature-icon {
@@ -113,74 +117,82 @@
         .btn {
             display: inline-block;
             padding: 18px 40px;
-            background: white;
-            color: #667eea;
+            background: #e41e31;
+            color: white;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
+            border-radius: 8px;
+            font-weight: 700;
             font-size: 1.1em;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
             margin: 10px;
+            border: 3px solid #b71c1c;
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            background: #c41e2e;
         }
         
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
+            background: #ffd700;
+            color: #1a472a;
+            border: 3px solid #daa520;
         }
         
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: #ffed4e;
+            transform: translateY(-2px);
         }
         
         .philosophy {
             margin-top: 60px;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #f5f5dc;
+            border-radius: 10px;
+            border: 3px solid #2d5a3d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            color: #1a472a;
         }
         
         .philosophy h2 {
             font-size: 2em;
             margin-bottom: 20px;
+            color: #e41e31;
         }
         
         .philosophy-quote {
             font-size: 1.3em;
             font-style: italic;
             margin-bottom: 15px;
-            opacity: 0.95;
+            color: #2d5a3d;
         }
         
         .philosophy-author {
             font-size: 1.1em;
-            opacity: 0.8;
+            color: #1a472a;
+            opacity: 0.85;
         }
         
         footer {
             margin-top: 60px;
-            opacity: 0.8;
+            opacity: 0.9;
             font-size: 0.9em;
+            color: #fff8dc;
         }
         
         footer a {
-            color: white;
+            color: #ffd700;
             text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-            transition: border-color 0.3s ease;
+            font-weight: 600;
+            border-bottom: 2px solid #ffd700;
+            transition: all 0.3s ease;
         }
         
         footer a:hover {
-            border-color: white;
+            color: #ffed4e;
+            border-color: #ffed4e;
         }
         
         @media (max-width: 768px) {
